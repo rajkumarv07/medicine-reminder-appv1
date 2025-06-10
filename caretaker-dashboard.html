@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Caretaker Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Welcome, Caretaker</h2>
+
+    <h3>Add Patient</h3>
+    <form id="addPatientForm">
+      <input type="text" id="patientName" placeholder="Name" required>
+      <input type="email" id="patientEmail" placeholder="Email" required>
+      <input type="password" id="patientPassword" placeholder="Password" required>
+      <button type="submit">Add Patient</button>
+    </form>
+
+    <h3>Add Medicine</h3>
+    <form id="addMedicineForm">
+      <select id="patientSelect" required>
+        <option value="" disabled selected>Select Patient</option>
+      </select>
+      <input type="text" id="medicineName" placeholder="Medicine Name" required >
+      <input type="time" id="dosageTime" required>
+      <textarea id="instructions" placeholder="Instructions" required></textarea>
+      <input type="file" id="medicineImage" accept="image/*" required>
+      <button type="submit">Add Medicine</button>
+    </form>
+  </div>
+
+  <script src="js/caretaker-dashboard.js"></script>
+</body>
+</html>

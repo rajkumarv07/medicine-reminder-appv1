@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Caretaker Access</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Caretaker</h2>
+    <div class="auth-buttons">
+      <button onclick="showRegister()">Register</button>
+      <button onclick="showLogin()">Login</button>
+    </div>
+
+    <form id="registerForm" class="hidden">
+      <h3>Register</h3>
+      <input type="text" id="registerName" placeholder="Full Name" required>
+      <input type="email" id="registerEmail" placeholder="Email" required>
+      <input type="password" id="registerPwd" placeholder="Password" required>
+      <button type="submit">Create Account</button>
+    </form>
+
+    <form id="loginForm" class="hidden">
+      <h3>Login</h3>
+      <input type="email" id="loginEmail" placeholder="Email" required>
+      <input type="password" id="loginPwd" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script src="js/caretaker.js"></script>
+</body>
+</html>

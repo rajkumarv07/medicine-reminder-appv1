@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Patient Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Your Medicines</h2>
+    <div id="reminderList"></div>
+  </div>
+
+  <!-- Optional test notification button -->
+  <button onclick="testNotification()">🔔 Test Notification</button>
+
+  <script src="js/patient.js"></script>
+  <script src="js/notifications.js"></script>
+  <script>
+    function testNotification() {
+      Notification.requestPermission().then(p => {
+        if (p === "granted") {
+          new Notification("💊 Test", {
+            body: "You should see this popup notification!",
+            icon: "https://cdn-icons-png.flaticon.com/512/6104/6104330.png"
+          });
+        } else {
+          alert("Notifications not granted");
+        }
+      });
+    }
+  </script>
+</body>
+</html>
